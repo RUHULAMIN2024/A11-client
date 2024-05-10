@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const FoodCard = ({ food }) => {
-    const {food_name, food_image,food_category, price, quantity }=food;
+    const {_id,food_name, food_image,food_category, price, quantity }=food;
 
     return (
 
@@ -17,7 +17,7 @@ const FoodCard = ({ food }) => {
                 <span>Quantity: {quantity}</span>
                 </div>
                 <div className="mt-3 card-actions">
-                    <Link to="" className="btn w-full hover:text-primary text-white bg-primary">Details</Link>
+                    <Link to={`/single-food/${_id}`} className="btn w-full hover:text-primary text-white bg-primary">Details</Link>
                 </div>
             </div>
         </div>

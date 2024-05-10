@@ -6,6 +6,8 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import AllFoods from "../pages/AllFoods";
 import Gallery from "../pages/Gallery";
+import PrivetRoute from "./PrivetRoute";
+import Details from "../pages/Details";
 
 
 const router = createBrowserRouter([
@@ -30,6 +32,13 @@ const router = createBrowserRouter([
         {
           path:"/all-foods",
           element:<AllFoods></AllFoods>,
+          loader: ()=> fetch(`${import.meta.env.VITE_API_URL}/foods`)
+        },
+
+        {
+          path:"/single-food/:id",
+          element:<PrivetRoute><Details></Details></PrivetRoute>,
+          loader: ({params})=> fetch(`${import.meta.env.VITE_API_URL}/single-food/${params.id}`),
         },
         {
           path:"/gallery",
