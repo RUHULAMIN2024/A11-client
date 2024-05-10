@@ -66,10 +66,11 @@ const Nav = () => {
                   <img referrerPolicy="no-referrer" alt="" src={userInfo?.photoURL} />
                 </div>
               </div>
-              <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-40">
+              <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
 
-                <li><button className="btn btn-sm md:btn-md btn-ghost">{userInfo.displayName}</button></li>
-                <li><button  className="btn btn-sm md:btn-md btn-ghost"></button></li>
+                <li><Link to="/my-food" className="btn btn-sm md:btn-md btn-ghost">My added food items</Link></li>
+                <li><Link to='/add-food'  className="btn btn-sm md:btn-md btn-ghost">Add a food item</Link></li>
+                <li><Link to='/my-order'  className="btn btn-sm md:btn-md btn-ghost">My ordered food items</Link></li>
               </ul>
             </div>
           </>
