@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import ContactUs from "../components/ContactUs";
 import Featurs from "../components/Features";
 import FoodCard from "../components/FoodCard";
@@ -18,6 +18,9 @@ const Home = () => {
                 {
                     foods.slice(0,6).map(food => <FoodCard food={food} key={food._id}></FoodCard>)
                 }
+            </div>
+            <div className="text-center mt-10">
+            <Link to='/all-foods' className="btn font-bold text-xl md:text-2xl text-white hover:text-secondary bg-secondary w-1/2 ">See All</Link>
             </div>
             <Featurs></Featurs>
             <ContactUs></ContactUs>
