@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
+import Featurs from "../components/Features";
 import FoodCard from "../components/FoodCard";
 import Slider from "../components/Slider";
 
@@ -17,7 +18,7 @@ const Home = () => {
                     foods.slice(0,6).map(food => <FoodCard food={food} key={food._id}></FoodCard>)
                 }
             </div>
-
+            <Featurs></Featurs>
         </div>
     );
 };

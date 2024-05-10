@@ -2,7 +2,7 @@ import { Typewriter } from 'react-simple-typewriter'
 
 const Featurs = () => {
     return (
-        <section className="m-4 md:m-8 dark:bg-gray-100 dark:text-gray-800">
+        <section className="m-4 py-12 md:m-8 dark:bg-gray-100 dark:text-gray-800">
             <div className="container mx-auto p-4 my-6 space-y-2 text-center">
                 <h2 className="text-2xl md:text-4xl font-bold"><Typewriter loop={0} typeSpeed={80} words={['All the features you want']} /></h2>
             </div>
