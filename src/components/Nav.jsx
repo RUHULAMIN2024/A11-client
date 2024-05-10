@@ -25,13 +25,15 @@ const Nav = () => {
 
   const links = <>
     <NavLink to="/" className={({ isActive }) => isActive ? 'text-white bg-secondary py-2  px-3 rounded-sm font-bold' : 'font-bold px-3 py-2'}>Home</NavLink>
+    <NavLink to="/all-foods" className={({ isActive }) => isActive ? 'text-white bg-secondary py-2  px-3 rounded-sm font-bold' : 'font-bold px-3 py-2'}>All Foods</NavLink>
+    <NavLink to="/gallery" className={({ isActive }) => isActive ? 'text-white bg-secondary py-2  px-3 rounded-sm font-bold' : 'font-bold px-3 py-2'}>Gallery</NavLink>
   </>
 
 
   const { logout, userInfo } = useContext(AuthContext)
 
   return (
-    <div className="navbar shadow-lg animate__fadeInDown mb-10 animate__animated container mx-auto sticky top-0 z-10 my-3 bg-base-100">
+    <div className="navbar shadow-lg animate__fadeInDown animate__animated container mx-auto sticky top-0 z-10 my-3 bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -57,6 +59,7 @@ const Nav = () => {
 
         {
           userInfo ? <>
+            <button onClick={() => logout()} className="btn mr-3  btn-sm md:btn-md text-white hover:text-primary bg-primary">Logout</button>
             <div className="dropdown dropdown-end">
               <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                 <div title={userInfo?.displayName} className="w-10 rounded-full">
@@ -66,13 +69,12 @@ const Nav = () => {
               <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-40">
 
                 <li><button className="btn btn-sm md:btn-md btn-ghost">{userInfo.displayName}</button></li>
-                <li><button onClick={() => logout()} className="btn btn-sm md:btn-md btn-ghost">Logout</button></li>
+                <li><button  className="btn btn-sm md:btn-md btn-ghost"></button></li>
               </ul>
             </div>
           </>
             :
             <>
-              <Link to="/register" className="btn  btn-sm md:btn-md text-white hover:text-primary bg-secondary">Register</Link>
               <Link to="/login" className="btn ml-3  btn-sm md:btn-md text-white hover:text-primary bg-primary">Login</Link>
             </>
         }

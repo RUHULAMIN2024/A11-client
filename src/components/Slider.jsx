@@ -14,7 +14,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 export default () => {
   return (
-    <>
+    <div className='py-10'>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -67,6 +67,6 @@ export default () => {
           </SwiperSlide>
 
       </Swiper>
-    </>
+    </div>
   );
 }
