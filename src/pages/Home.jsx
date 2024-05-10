@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
+import ContactUs from "../components/ContactUs";
 import Featurs from "../components/Features";
 import FoodCard from "../components/FoodCard";
 import Slider from "../components/Slider";
@@ -19,6 +20,7 @@ const Home = () => {
                 }
             </div>
             <Featurs></Featurs>
+            <ContactUs></ContactUs>
         </div>
     );
 };
