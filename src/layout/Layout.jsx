@@ -7,7 +7,9 @@ const Layout = () => {
     return (
         <div>
             <Nav></Nav>
+            <div className="flex items-center min-h-[calc(100vh-368px)]">
             <Outlet></Outlet>
+            </div>
             <Footer></Footer>
         </div>
     );

@@ -1,11 +1,12 @@
 import { Helmet } from "react-helmet";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const Details = () => {
 
     const food = useLoaderData();
 
     const {
+        _id,
         food_name,
         food_image,
         food_category,
@@ -39,7 +40,7 @@ const Details = () => {
                         <p><span className="font-bold"> Price: </span>{price} </p>
                         <p><span className="font-bold">Quantity: </span>{quantity} </p>
                     </div>
-                    <button className="w-full bg-primary hover:text-primary text-white btn mt-5">Purchase</button>
+                    <Link to={`/purchase/${_id}`} className="w-full bg-primary hover:text-primary text-white btn mt-5">Purchase</Link>
                 </div>
             </div>
 

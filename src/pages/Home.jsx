@@ -20,7 +20,7 @@ const Home = () => {
                 }
             </div>
             <div className="text-center mt-10">
-            <Link to='/all-foods' className="btn font-bold text-xl md:text-2xl text-white hover:text-secondary bg-secondary w-1/2 ">See All</Link>
+            <Link to='/all-foods' className="btn font-bold text-xl md:text-2xl text-white hover:text-primary bg-primary w-3/12 ">See All</Link>
             </div>
             <Featurs></Featurs>
             <ContactUs></ContactUs>
