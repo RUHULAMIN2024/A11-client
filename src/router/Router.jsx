@@ -10,6 +10,7 @@ import PrivetRoute from "./PrivetRoute";
 import Details from "../pages/Details";
 import AddFood from "../pages/AddFood";
 import MyFood from "../pages/MyFood";
+import UpdateFood from "../pages/UpdateFood";
 
 
 const router = createBrowserRouter([
@@ -49,6 +50,11 @@ const router = createBrowserRouter([
         {
           path:"/my-food",
           element:<PrivetRoute><MyFood></MyFood></PrivetRoute>,
+        },
+        {
+          path:"/update-food/:id",
+          element:<PrivetRoute><UpdateFood></UpdateFood></PrivetRoute>,
+          loader: ({params})=> fetch(`${import.meta.env.VITE_API_URL}/single-food/${params.id}`),
         },
         {
           path:"/gallery",

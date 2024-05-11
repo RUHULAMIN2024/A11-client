@@ -76,7 +76,7 @@ const MyFood = () => {
                                     <td>{item.food_name}</td>
                                     <td>{item.food_category}</td>
                                     <td>{item.price}</td>
-                                    <td><Link to={`/update-spot/${item._id}`} className="btn bg-primary btn-sm text-white hover:text-primary">Edit</Link></td>
+                                    <td><Link to={`/update-food/${item._id}`} className="btn bg-primary btn-sm text-white hover:text-primary">Edit</Link></td>
                                     <td><button onClick={() => handleDelete(item._id)} className="btn bg-secondary btn-sm text-white hover:text-red-500">Delete</button></td>
                                 </tr>
                             ))
