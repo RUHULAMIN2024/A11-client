@@ -41,10 +41,10 @@ const Purchase = () => {
                 icon: 'error'
               })
               return
-        }else if(order_quantity>20){
+        }else if(quantity<order_quantity){
             Swal.fire({
                 title: 'Invalid Request!',
-                text: 'You wont be able to buy more than 20',
+                text: 'can not buy more than the available quantity',
                 icon: 'error'
               })
               return

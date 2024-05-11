@@ -12,6 +12,7 @@ import AddFood from "../pages/AddFood";
 import MyFood from "../pages/MyFood";
 import UpdateFood from "../pages/UpdateFood";
 import Purchase from "../pages/Purchase";
+import MyPurchase from "../pages/MyPurchase";
 
 
 const router = createBrowserRouter([
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
         {
           path:"/my-food",
           element:<PrivetRoute><MyFood></MyFood></PrivetRoute>,
+        },
+        {
+          path:"/my-order",
+          element:<PrivetRoute><MyPurchase></MyPurchase></PrivetRoute>,
         },
         {
           path:"/update-food/:id",
