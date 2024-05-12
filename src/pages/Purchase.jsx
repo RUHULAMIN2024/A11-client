@@ -1,11 +1,14 @@
+import axios from "axios";
 import { useState } from "react";
 import { useContext } from "react";
 import { Helmet } from "react-helmet";
-import { Link, useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Purchase = () => {
+    const navigate=useNavigate()
+
     const [date, setDate] = useState(new Date())
     const food = useLoaderData();
     const { userInfo } = useContext(AuthContext);
@@ -13,6 +16,7 @@ const Purchase = () => {
 
     const {
         _id,
+        count,
         food_name,
         food_image,
         food_category,
@@ -34,26 +38,26 @@ const Purchase = () => {
 
         const customer = { name, email }
 
-        if(parseInt(quantity)===0){
+        if (parseInt(quantity) === 0) {
             Swal.fire({
                 title: 'Stock Over!',
                 text: 'Item is not available',
                 icon: 'error'
-              })
-              return
-        }else if(quantity<order_quantity){
+            })
+            return
+        } else if (quantity < order_quantity) {
             Swal.fire({
                 title: 'Invalid Request!',
                 text: 'can not buy more than the available quantity',
                 icon: 'error'
-              })
-              return
-        }else if(added_by.email===email){
+            })
+            return
+        } else if (added_by.email === email) {
             Swal.fire({
                 title: 'Invalid Request!',
                 text: 'You wont be able to buy your own product',
                 icon: 'error'
-              })
+            })
             return
         }
 
@@ -86,8 +90,9 @@ const Purchase = () => {
                     });
                 }
             })
-
-
+        const newCount = parseInt(count) + parseInt(order_quantity)
+        axios.patch(`${import.meta.env.VITE_API_URL}/foods/${_id}`, {newCount})
+        .then(res=> navigate('/my-order'))
 
     }
     return (

@@ -5,6 +5,7 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 import Swal from 'sweetalert2'
 
 const AddFood = () => {
+    const count=0
     const { userInfo } = useContext(AuthContext);
     const name = userInfo.displayName;
     const email = userInfo.email;
@@ -16,7 +17,7 @@ const AddFood = () => {
         formState: { errors },
     } = useForm()
     const onSubmit = data => {
-        const info = { ...data, added_by }
+        const info = { ...data, added_by, count }
 
         fetch(`${import.meta.env.VITE_API_URL}/foods`, {
             method: 'POST',
