@@ -1,8 +1,16 @@
-# React + Vite
+# Flavor Fusion
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## http://flavor-fusion-11.surge.sh/
 
-Currently, two official plugins are available:
+## Features:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User Registration and Login
+- Login with Google and Github
+- Responsive For All device
+- Add Food Opportunity
+- Add FeedBack Option
+- Purchase Option
+- User friendly 
+- ...
+
+## Assignment_ID: assignment_category_0005
