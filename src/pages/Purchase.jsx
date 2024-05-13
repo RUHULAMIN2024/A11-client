@@ -72,7 +72,7 @@ const Purchase = () => {
             date,
         }
         console.log(info)
-        fetch(`${import.meta.env.VITE_API_URL}/orders`, {credentials:'include'}, {
+        fetch(`${import.meta.env.VITE_API_URL}/orders`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

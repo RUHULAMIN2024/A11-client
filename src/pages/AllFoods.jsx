@@ -5,15 +5,22 @@ import FoodCard from "../components/FoodCard";
 
 const AllFoods = () => {
     const foods = useLoaderData()
-    const [allFood, setAllFood]=useState(foods)
+    const [allFood, setAllFood] = useState(foods)
 
-    const handleSubmit=e=>{
+    const handleSubmit = e => {
         e.preventDefault()
-        const value=e.target.search.value
+        const value = e.target.search.value
+
+        fetch(`${import.meta.env.VITE_API_URL}/food-name/${value}`)
+            .then(res => res.json())
+            .then(data => {
+                setAllFood(data)
+            })
+
     }
 
     return (
-        <div className="py-12">
+        <div className="container mx-auto py-12">
             <Helmet><title>Flavor Fusion | All Foods</title></Helmet>
             <h2 className="text-2xl md:text-4xl text-center my-12 font-bold">All Foods</h2>
             <form onSubmit={handleSubmit}>
@@ -22,6 +29,7 @@ const AllFoods = () => {
                         className='px-6 border rounded-lg py-2 bg-white outline-none'
                         type='text'
                         name='search'
+                        required
                         placeholder='Enter Food Name'
                         aria-label='Enter Food Name'
                     />
@@ -33,7 +41,7 @@ const AllFoods = () => {
             </form>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                 {
-                    foods.map(food => <FoodCard food={food} key={food._id}></FoodCard>)
+                    allFood?.map(food => <FoodCard food={food} key={food._id}></FoodCard>)
                 }
             </div>
 
