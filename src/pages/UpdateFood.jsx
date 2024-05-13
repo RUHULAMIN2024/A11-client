@@ -36,7 +36,7 @@ const UpdateFood = () => {
     const onSubmit = data => {
         const info = { ...data, added_by }
 
-        fetch(`${import.meta.env.VITE_API_URL}/foods/${_id}`, {
+        fetch(`${import.meta.env.VITE_API_URL}/foods/${_id}`,{credentials:'include'}, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

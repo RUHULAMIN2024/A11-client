@@ -53,9 +53,8 @@ const Gallery = () => {
                         icon: "success"
 
                     });
-                    e.target.photo.value=""
-                    e.target.feedback.value=""
-                    navigate('/gallery')
+                    e.target.reset()
+                    // navigate('/gallery')
                 }
             })
 

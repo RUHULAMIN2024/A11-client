@@ -11,7 +11,7 @@ const MyFood = () => {
     const { userInfo } = useContext(AuthContext);
     const userEmail = userInfo?.email;
     useEffect(() => {
-        fetch(`${import.meta.env.VITE_API_URL}/foods/${userEmail}`)
+        fetch(`${import.meta.env.VITE_API_URL}/foods/${userEmail}`,{credentials:'include'})
             .then(res => res.json())
             .then(data => {
                 setItems(data)

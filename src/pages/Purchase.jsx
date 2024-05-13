@@ -72,7 +72,7 @@ const Purchase = () => {
             date,
         }
         console.log(info)
-        fetch(`${import.meta.env.VITE_API_URL}/orders`, {
+        fetch(`${import.meta.env.VITE_API_URL}/orders`, {credentials:'include'}, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -91,7 +91,7 @@ const Purchase = () => {
                 }
             })
         const newCount = parseInt(count) + parseInt(order_quantity)
-        axios.patch(`${import.meta.env.VITE_API_URL}/foods/${_id}`, {newCount})
+        axios.patch(`${import.meta.env.VITE_API_URL}/foods/${_id}`, {newCount},{withCredentials:true})
         .then(res=> navigate('/my-order'))
 
     }

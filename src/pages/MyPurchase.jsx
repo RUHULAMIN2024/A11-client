@@ -9,7 +9,7 @@ const MyPurchase = () => {
     const { userInfo } = useContext(AuthContext);
     const userEmail = userInfo?.email;
     useEffect(() => {
-        fetch(`${import.meta.env.VITE_API_URL}/orders/${userEmail}`)
+        fetch(`${import.meta.env.VITE_API_URL}/orders/${userEmail}`,{credentials:'include'})
             .then(res => res.json())
             .then(data => {
                 setItems(data)
@@ -64,7 +64,7 @@ const MyPurchase = () => {
                     </thead>
                     <tbody>
                         {
-                            items.map(item => (
+                            items?.map(item => (
                                 <tr key={item._id}>
                                     <td><div className="avatar">
                                         <div className="mask mask-squircle w-12 h-12">

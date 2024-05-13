@@ -43,7 +43,7 @@ const router = createBrowserRouter([
         {
           path:"/single-food/:id",
           element:<PrivetRoute><Details></Details></PrivetRoute>,
-          loader: ({params})=> fetch(`${import.meta.env.VITE_API_URL}/single-food/${params.id}`),
+          loader: ({params})=> fetch(`${import.meta.env.VITE_API_URL}/single-food/${params.id}`,{credentials:'include'}),
         },
         {
           path:"/add-food",
@@ -71,7 +71,7 @@ const router = createBrowserRouter([
         {
           path:"/purchase/:id",
           element:<PrivetRoute><Purchase></Purchase></PrivetRoute>,
-          loader: ({params})=> fetch(`${import.meta.env.VITE_API_URL}/single-food/${params.id}`),
+          loader: ({params})=> fetch(`${import.meta.env.VITE_API_URL}/single-food/${params.id}`,{credentials:'include'}),
 
         },
       

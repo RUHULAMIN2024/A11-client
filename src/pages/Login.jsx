@@ -10,9 +10,9 @@ import Swal from "sweetalert2";
 const Login = () => {
 
     const [showPassword, setShowPassword] = useState(false);
-    const {loginUser, googleLogin, githubLogin } = useContext(AuthContext);
-    const location = useLocation(); 
-    const navigate= useNavigate();
+    const { loginUser, googleLogin, githubLogin } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const {
         register,
@@ -23,6 +23,7 @@ const Login = () => {
         const { email, password } = data;
         loginUser(email, password)
             .then(result => {
+                
                 console.log(result)
                 Swal.fire({
                     title: "success",
@@ -32,12 +33,12 @@ const Login = () => {
                 });
                 navigate(location?.state ? location.state : '/')
             })
-            .catch(error=>{
+            .catch(error => {
                 Swal.fire({
                     title: 'Error!',
                     text: `${error.message}`,
                     icon: 'error'
-                  })
+                })
             })
     }
 
@@ -62,7 +63,7 @@ const Login = () => {
                             }
                         </span>
                     </label>
-                    <input type={showPassword?"text":"password"} placeholder="Password" className="input input-bordered" {...register("password", { required: true })} />
+                    <input type={showPassword ? "text" : "password"} placeholder="Password" className="input input-bordered" {...register("password", { required: true })} />
                     {errors.password && <span className="text-red-500">This field is required</span>}
                     <label className="label">
                         <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
@@ -80,8 +81,8 @@ const Login = () => {
                 <p>======continue with=======</p>
             </div>
             <div className="flex justify-between">
-                <button className="btn btn-outline" onClick={()=>googleLogin().then(result=>{navigate(location?.state ? location.state : '/')})}>Google</button>
-                <button className="btn btn-outline" onClick={()=>githubLogin().then(result=>{navigate(location?.state ? location.state : '/')})}>Github</button>
+                <button className="btn btn-outline" onClick={() => googleLogin().then(result => { navigate(location?.state ? location.state : '/') })}>Google</button>
+                <button className="btn btn-outline" onClick={() => githubLogin().then(result => { navigate(location?.state ? location.state : '/') })}>Github</button>
             </div>
         </div>
     );

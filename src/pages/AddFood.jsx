@@ -19,7 +19,7 @@ const AddFood = () => {
     const onSubmit = data => {
         const info = { ...data, added_by, count }
 
-        fetch(`${import.meta.env.VITE_API_URL}/foods`, {
+        fetch(`${import.meta.env.VITE_API_URL}/foods`,{credentials:'include'}, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -41,7 +41,7 @@ const AddFood = () => {
 
     }
     return (
-        <div>
+        <div className="container mx-auto">
             <Helmet><title>Flavor Fusion | Add Food</title></Helmet>
             <form onSubmit={handleSubmit(onSubmit)} className="container p-10 my-12 rounded-2xl bg-base-200 mx-auto">
                 <h2 className="text-3xl mb-3 text-center font-bold">Add A Food Item</h2>

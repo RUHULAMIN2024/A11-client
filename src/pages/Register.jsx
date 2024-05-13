@@ -41,7 +41,7 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 userUpdate(name, photo)
-                setUserInfo({...userInfo, photoURL:photo, displayName:name})
+                setUserInfo({...result?.user, photoURL:photo, displayName:name})
                 Swal.fire({
                     title: "success",
                     text: "Registered Successfully ",
