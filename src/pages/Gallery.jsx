@@ -65,7 +65,12 @@ const Gallery = () => {
     return (
         <div className="container mx-auto">
             <Helmet><title>Flavor Fusion | Gallery</title></Helmet>
-            <h2 className="text-2xl md:text-4xl text-center my-12 font-bold">Gallery</h2>
+            <div className="bg-cover hero-overlay bg-opacity-60 bg-center my-8 flex flex-col space-y-5 justify-center items-center w-full h-60" style={{ backgroundImage: 'url(https://i.ibb.co/sHhPDRD/c3.jpg)' }}>
+                <h2 className="text-3xl uppercase text-white md:text-5xl text-center font-bold">Gallery</h2>
+                <div className='w-full flex justify-end'>
+                <button onClick={handleModal} className='btn bg-secondary -mb-10 mr-10 px-10 text-white hover:text-primary'> Add Your Feedback </button>
+            </div>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {
                     gallery.map(item => (
@@ -83,9 +88,7 @@ const Gallery = () => {
 
 
 
-            <div className='flex justify-end my-6'>
-                <button onClick={handleModal} className='btn bg-primary px-10 text-white hover:text-primary'> Add </button>
-            </div>
+            
 
             {/* Open the modal using document.getElementById('ID').showModal() method */}
             <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
@@ -128,7 +131,7 @@ const Gallery = () => {
                                 className='block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md   focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40  focus:outline-none focus:ring'
                             />
                         </div>
-                        
+
 
                         <div className="modal-action">
                             <button className="btn">Add</button>

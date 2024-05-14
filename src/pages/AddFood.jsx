@@ -5,6 +5,7 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 import Swal from 'sweetalert2'
 
 const AddFood = () => {
+
     const count=0
     const { userInfo } = useContext(AuthContext);
     const name = userInfo.displayName;
