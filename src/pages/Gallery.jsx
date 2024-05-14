@@ -71,7 +71,7 @@ const Gallery = () => {
                 <button onClick={handleModal} className='btn bg-secondary -mb-10 mr-10 px-10 text-white hover:text-primary'> Add Your Feedback </button>
             </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 mb-8 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {
                     gallery.map(item => (
                         <div key={item._id} style={{ backgroundImage: `url(${item.photo})` }} className=" bg-cover h-72">
