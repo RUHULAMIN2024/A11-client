@@ -7,7 +7,7 @@ const FoodCard = ({ food }) => {
 
         <div className="card bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">
-                <img src={food_image} alt="Shoes" className="rounded-xl w-full h-60" />
+                <img src={food_image} alt="Shoes" className="rounded-xl w-full h-52" />
             </figure>
             <div className="card-body">
                 <h2 className="card-title">{food_name}</h2>

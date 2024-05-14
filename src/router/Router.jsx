@@ -60,7 +60,7 @@ const router = createBrowserRouter([
         {
           path:"/update-food/:id",
           element:<PrivetRoute><UpdateFood></UpdateFood></PrivetRoute>,
-          loader: ({params})=> fetch(`${import.meta.env.VITE_API_URL}/single-food/${params.id}`),
+          loader: ({params})=> fetch(`${import.meta.env.VITE_API_URL}/single-food/${params.id}`,{credentials:'include'}),
         },
         {
           path:"/gallery",

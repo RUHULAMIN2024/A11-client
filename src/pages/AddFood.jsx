@@ -19,7 +19,7 @@ const AddFood = () => {
     const onSubmit = data => {
         const info = { ...data, added_by, count }
 
-        fetch(`${import.meta.env.VITE_API_URL}/foods`,{credentials:'include'}, {
+        fetch(`${import.meta.env.VITE_API_URL}/foods`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -4,14 +4,16 @@ const Featurs = () => {
     return (
         <section class="bg-white py-12 container mx-auto dark:bg-gray-900">
             <div class="container px-6 py-10 mx-auto">
-                <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
+                <h1 class="text-xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">
                 <Typewriter loop={0} typeSpeed={80} words={['Explore Our Awesome Feature']} />
                 </h1>
                 <div class="mt-2">
-                    <span class="inline-block w-40 h-1 bg-blue-500 rounded-full"></span>
+                    <span class="hidden md:inline-block w-40 h-1 bg-blue-500 rounded-full"></span>
+                    <span class="inline-block w-30 h-1 ml-1 bg-blue-500 rounded-full"></span>
                     <span class="inline-block w-20 h-1 ml-1 bg-blue-500 rounded-full"></span>
+                    <span class="inline-block w-15 h-1 ml-1 bg-blue-500 rounded-full"></span>
                     <span class="inline-block w-10 h-1 ml-1 bg-blue-500 rounded-full"></span>
-                    <span class="inline-block w-8 h-1 ml-1 bg-blue-500 rounded-full"></span>
+                    <span class="inline-block w-7 h-1 ml-1 bg-blue-500 rounded-full"></span>
                     <span class="inline-block w-5 h-1 ml-1 bg-blue-500 rounded-full"></span>
                     <span class="inline-block w-4 h-1 ml-1 bg-blue-500 rounded-full"></span>
                     <span class="inline-block w-3 h-1 ml-1 bg-blue-500 rounded-full"></span>

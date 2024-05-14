@@ -54,7 +54,7 @@ const Gallery = () => {
 
                     });
                     e.target.reset()
-                    // navigate('/gallery')
+                    navigate('/gallery')
                 }
             })
 
@@ -69,7 +69,7 @@ const Gallery = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {
                     gallery.map(item => (
-                        <div key={item._id} style={{ backgroundImage: `url(${item.photo})` }} className=" bg-cover h-80">
+                        <div key={item._id} style={{ backgroundImage: `url(${item.photo})` }} className=" bg-cover h-72">
                             {/* <div className="hero-overlay opacity-60"></div> */}
 
                             <div className="text-white hover:hero-overlay hover:bg-opacity-60  opacity-0 transition-all duration-500 hover:opacity-100 w-full h-full flex flex-col items-center justify-center">

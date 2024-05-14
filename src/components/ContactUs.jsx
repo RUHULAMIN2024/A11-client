@@ -9,7 +9,7 @@ const ContactUs = () => {
 		<section className="py-16 dark:bg-gray-100 container mx-auto dark:text-gray-900">
 			<div className="grid grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
 				<div className="py-6 md:py-0 md:px-6">
-					<h1 className="text-3xl md:text-5xl font-bold">Get in touch</h1>
+					<h1 className="text-3xl md:text-4xl font-bold">Get in touch</h1>
 					<p className="pt-2 pb-4">Fill in the form to start a conversation</p>
 					<div className="space-y-4">
 						<p className="flex items-center">
