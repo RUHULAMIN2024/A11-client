@@ -63,15 +63,15 @@ const Gallery = () => {
     }
 
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto my-10">
             <Helmet><title>Flavor Fusion | Gallery</title></Helmet>
-            <div className="bg-cover hero-overlay bg-opacity-60 bg-center my-8 flex flex-col space-y-5 justify-center items-center w-full h-60" style={{ backgroundImage: 'url(https://i.ibb.co/sHhPDRD/c3.jpg)' }}>
+            <div className="bg-cover hero-overlay bg-opacity-60 bg-center mb-8 flex flex-col space-y-5 justify-center items-center w-full h-40 md:h-60" style={{ backgroundImage: 'url(https://i.ibb.co/sHhPDRD/c3.jpg)' }}>
                 <h2 className="text-3xl uppercase text-white md:text-5xl text-center font-bold">Gallery</h2>
-                <div className='w-full flex justify-end'>
-                <button onClick={handleModal} className='btn bg-secondary -mb-10 mr-10 px-10 text-white hover:text-primary'> Add Your Feedback </button>
+                <div className='w-full flex justify-center md:justify-end'>
+                    <button onClick={handleModal} className='btn btn-sm md:btn-lg bg-secondary -mb-10 md:mr-10 px-10 text-white hover:text-primary'> Add Your Feedback </button>
+                </div>
             </div>
-            </div>
-            <div className="grid grid-cols-1 mb-8 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {
                     gallery.map(item => (
                         <div key={item._id} style={{ backgroundImage: `url(${item.photo})` }} className=" bg-cover h-72">
@@ -79,7 +79,7 @@ const Gallery = () => {
 
                             <div className="text-white hover:hero-overlay hover:bg-opacity-60  opacity-0 transition-all duration-500 hover:opacity-100 w-full h-full flex flex-col items-center justify-center">
                                 <h2 className="text-3xl text-center my-3 font-bold">{item.name}</h2>
-                                <p>Feedback: {item.feedback}</p>
+                                <p className="text-center">Feedback: {item.feedback}</p>
                             </div>
                         </div>
                     ))
@@ -88,7 +88,7 @@ const Gallery = () => {
 
 
 
-            
+
 
             {/* Open the modal using document.getElementById('ID').showModal() method */}
             <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">

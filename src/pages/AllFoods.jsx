@@ -20,9 +20,9 @@ const AllFoods = () => {
     }
 
     return (
-        <div className="container mx-auto py-12">
+        <div className="container mx-auto py-10">
             <Helmet><title>Flavor Fusion | All Foods</title></Helmet>
-            <div className="bg-cover hero-overlay bg-opacity-60 flex-col bg-center my-8 flex justify-center items-center space-y-5 w-full h-60" style={{ backgroundImage: 'url(https://i.ibb.co/WKCBVpW/1.jpg)' }}>
+            <div className="bg-cover hero-overlay bg-opacity-60 flex-col bg-center mb-8 flex justify-center items-center space-y-5 w-full h-40 md:h-60" style={{ backgroundImage: 'url(https://i.ibb.co/WKCBVpW/1.jpg)' }}>
                 <h2 className="text-3xl uppercase text-white md:text-5xl text-center font-bold">All Foods</h2>
                 <form onSubmit={handleSubmit}>
                     <div className='flex justify-center p-1 overflow-hidden space-x-5  md:w-96 mx-auto'>
