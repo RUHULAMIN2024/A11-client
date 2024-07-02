@@ -1,9 +1,8 @@
-# Flavor Fusion
-
-## http://flavor-fusion-11.surge.sh/
+# Flavor Fusion (Client)
+### Restaurant Management Website
+### http://flavor-fusion-11.surge.sh/
 
 ## Features:
-
 - User Registration and Login
 - Login with Google and Github
 - Responsive For All device
@@ -13,4 +12,12 @@
 - User friendly 
 - ...
 
-## Assignment_ID: assignment_category_0005
+## Technologies:
+- HTML 
+- CSS
+- JavaScript 
+- Tailwind CSS 
+- React.js
+- Node.js
+- Express.js
+- MongoDB
