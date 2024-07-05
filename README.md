@@ -1,6 +1,6 @@
 # Flavor Fusion (Client)
 ### Restaurant Management Website
-### http://flavor-fusion-11.surge.sh/
+### https://flavor-fusion-11.surge.sh/
 
 ## Features:
 - User Registration and Login
